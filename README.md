@@ -8,6 +8,8 @@ https://www.barchart.com/stocks/quotes/$SPX/options
 I put the data in a directory called data.
 
 2. estimate interest rates 
+I need to calculate C-P. And for this I need to clean my data.
+
 3. implicit volatility
 4. estimate volatily of time series
 
