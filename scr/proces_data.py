@@ -36,6 +36,7 @@ def clean_data(dfs:"komt uit load_data")->"clean df":
 
     cols = ["maturity", "strike", "prijs_call", "foutenvlag_call"]
     data_df = pd.DataFrame(data_calls, columns=cols)
+    data_df["strike"] = pd.to_numeric(data_df["strike"].apply(lambda x : x.split(".")[0].replace(",","")))
     data_df["prijs_put"] = prijzen_puts
     data_df["foutenvlag_put"] = foutenvlag_puts
     return data_df
