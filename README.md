@@ -8,7 +8,12 @@ https://www.barchart.com/stocks/quotes/$SPX/options
 I put the data in a directory called data.
 
 2. estimate interest rates 
-I need to calculate C-P. And for this I need to clean my data.
+I need to calculate C-P. And for this I need to clean my data. I'll put
+everything in a big DataFrame. I'll need following columns:
+- strike
+- maturity date
+- call price
+- put price
 
 3. implicit volatility
 4. estimate volatily of time series
