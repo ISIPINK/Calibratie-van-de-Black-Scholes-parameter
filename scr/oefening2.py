@@ -30,7 +30,5 @@ def save_results():
     df_rS.to_csv("../data/options_spx_estimated_rS.csv")
 
 if __name__ == "__main__":
-    file = "../data/options_spx_data.csv"
-    df =  pd.read_csv(file,index_col = 0)
-    df_rS = calc_r_S(df)
+    save_results()
 
