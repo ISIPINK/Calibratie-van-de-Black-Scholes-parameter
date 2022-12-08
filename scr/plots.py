@@ -11,19 +11,25 @@ def load_data():
     return  df_data, df_rS
 
 def plot_prijs_strike(df):
-    print(ggplot(df, aes(color = "maturity")) 
+    plot = (ggplot(df, aes(color = "maturity")) 
             + geom_point(aes(x="strike", y ="prijs_call"),shape = ".")
             + geom_point(aes(x="strike", y ="prijs_put"), shape = ","))
+    plot.save("../plots/prijs_vs_strike.png")
+    print(plot)
 
 def plot_put_call(df):
     df["put_call"]= df["prijs_call"] - df["prijs_put"]
-    print(ggplot(df, aes(color= "maturity"))
+    plot = (ggplot(df, aes(color= "maturity"))
         + geom_point(aes(x = "strike", y = "put_call")))
+    plot.save("../plots/put_call_parity.png")
+    print(plot)
 
 def plot_estimated_r(df):
-    print(ggplot(df, aes(x ="looptijd_jaar", y = "rente"))
+    plot = (ggplot(df, aes(x ="looptijd_jaar", y = "rente"))
             + geom_point(aes(size = "begin_prijs"))
             + geom_text(aes(label = "maturity"), nudge_y = 0.02))
+    plot.save("../plots/estimated_rS.png")
+    print(plot)
 
 def alle_plots():
     df_data, df_rS = load_data()
@@ -32,5 +38,4 @@ def alle_plots():
     plot_estimated_r(df_rS)
 
 if __name__ == "__main__":
-    df_data, df_rS = load_data()
-    plot_estimated_r(df_rS)
+    alle_plots()
