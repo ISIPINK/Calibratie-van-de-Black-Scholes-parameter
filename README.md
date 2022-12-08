@@ -10,12 +10,17 @@ https://www.barchart.com/stocks/quotes/$SPX/options
 I put the data in (../data/).
 
 ## estimate interest rates and begin prices
+
 ### data cleaning
 I cleaned the data and put everything in (../data/options_spx_data.csv).
 ### estimating r and S_0
 I used simple algebra and put the results in (../data/options_spx_estimated_rS.csv). 
+### compare to FED and LIBOR
+I couldn't find fast what the FED and the LIBOR were for those maturities but
+the ones I found were all around 3.5% - 4.2 %.
 
 
-3. implicit volatility
-4. estimate volatily of time series
+## implicit volatility
+
+## estimate volatily of time series
 
