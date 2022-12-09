@@ -21,6 +21,8 @@ the ones I found were all around 3.5% - 4.2 %.
 
 
 ## implicit volatility
+I got a program from the internet that
+calculates implicit  volatility.
 
 ## estimate volatily of time series
 
