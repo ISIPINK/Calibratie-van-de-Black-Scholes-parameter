@@ -15,6 +15,8 @@ I put the data in (../data/).
 I cleaned the data and put everything in (../data/options_spx_data.csv).
 ### estimating r and S_0
 I used simple algebra and put the results in (../data/options_spx_estimated_rS.csv). 
+Here is a simple plot of this:
+![est-rS](./plots/estimated_rS.png)
 ### compare to FED and LIBOR
 I couldn't find fast what the FED and the LIBOR were for those maturities but
 the ones I found were all around 3.5% - 4.2 %.
